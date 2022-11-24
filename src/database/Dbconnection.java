@@ -32,7 +32,7 @@ public class Dbconnection {
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://sql6.freesqldatabase.com/netbeansproject",username,password);
+                    "jdbc:mysql://sql6.freesqldatabase.com/sql6580451",username,password);
 
 
 

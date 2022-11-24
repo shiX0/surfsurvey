@@ -4,6 +4,9 @@
  */
 package view;
 
+import controller.UserController;
+import model.UserModel;
+
 /**
  *
  * @author ACER
@@ -26,34 +29,25 @@ public class Test extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jTextField2 = new javax.swing.JTextField();
-        jPasswordField3 = new javax.swing.JPasswordField();
+        lName = new javax.swing.JTextField();
+        uPassword = new javax.swing.JPasswordField();
+        uDob = new javax.swing.JTextField();
+        cPassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        fName = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        uEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        fName1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPasswordField1.setBackground(new java.awt.Color(0, 0, 0));
-        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 200, 30));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -91,71 +85,119 @@ public class Test extends javax.swing.JFrame {
         jLabel6.setText("Last Name");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 125, -1));
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 102), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 200, 30));
+        lName.setBackground(new java.awt.Color(0, 0, 0));
+        lName.setForeground(new java.awt.Color(255, 255, 255));
+        lName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 102), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lName, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 200, 30));
 
-        jPasswordField2.setBackground(new java.awt.Color(0, 0, 0));
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+        uPassword.setBackground(new java.awt.Color(0, 0, 0));
+        uPassword.setForeground(new java.awt.Color(255, 255, 255));
+        uPassword.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        uPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+                uPasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 200, 30));
+        getContentPane().add(uPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 200, 30));
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        uDob.setBackground(new java.awt.Color(0, 0, 0));
+        uDob.setForeground(new java.awt.Color(255, 255, 255));
+        uDob.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        uDob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                uDobActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 200, 30));
+        getContentPane().add(uDob, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 200, 30));
 
-        jPasswordField3.setBackground(new java.awt.Color(0, 0, 0));
-        jPasswordField3.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 255, 102), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 200, 30));
+        cPassword.setBackground(new java.awt.Color(0, 0, 0));
+        cPassword.setForeground(new java.awt.Color(255, 255, 255));
+        cPassword.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 255, 102), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        getContentPane().add(cPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, 200, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 255, 51));
         jButton1.setText("Sign Up");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 255, 102), new java.awt.Color(0, 0, 0)));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 510, 150, 60));
 
-        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 200, 30));
+        fName.setBackground(new java.awt.Color(0, 0, 0));
+        fName.setForeground(new java.awt.Color(255, 255, 255));
+        fName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        fName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fNameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 200, 30));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Group 4.png")); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 250, 120));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        uEmail.setBackground(new java.awt.Color(0, 0, 0));
+        uEmail.setForeground(new java.awt.Color(255, 255, 255));
+        uEmail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 51), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        getContentPane().add(uEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 210, 40));
+
+        jLabel7.setBackground(new java.awt.Color(255, 102, 102));
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Desktop - 6.png")); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 630));
 
+        fName1.setBackground(new java.awt.Color(0, 0, 0));
+        fName1.setForeground(new java.awt.Color(255, 255, 255));
+        fName1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        fName1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fName1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 200, 30));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void uDobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uDobActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_uDobActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void uPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_uPasswordActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            
+        String firstName = fName.getText();
+        String lastName = lName.getText();
+        String email = uEmail.getText();
+        String dob = uDob.getText();
+        String passwordd = uPassword.getText();
+        String confirmPass = cPassword.getText();
+        
+        if(passwordd.equals(confirmPass)){
+            UserModel user= new UserModel(firstName,lastName,email,dob,passwordd);
+            UserController uc= new UserController();
+            uc.insertUser(user); 
+        }
+        
+        
+              // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void fNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_fNameActionPerformed
+
+    private void fName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fName1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fName1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +250,9 @@ public class Test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField cPassword;
+    private javax.swing.JTextField fName;
+    private javax.swing.JTextField fName1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -217,11 +262,9 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField lName;
+    private javax.swing.JTextField uDob;
+    private javax.swing.JTextField uEmail;
+    private javax.swing.JPasswordField uPassword;
     // End of variables declaration//GEN-END:variables
 }
