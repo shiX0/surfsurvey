@@ -5,6 +5,7 @@
 package view;
 
 import controller.UserController;
+import javax.swing.JOptionPane;
 import model.UserModel;
 
 /**
@@ -185,6 +186,11 @@ public class Test extends javax.swing.JFrame {
             UserModel user= new UserModel(firstName,lastName,email,dob,passwordd);
             UserController uc= new UserController();
             uc.insertUser(user); 
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"password and confirm passoword do not match!!", "error",JOptionPane.ERROR_MESSAGE);
+            
+            
         }
         
         
