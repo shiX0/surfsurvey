@@ -20,5 +20,6 @@ public class UserController{
     return result;
 }
 
+public int UpdateSurvey() 
 
 }

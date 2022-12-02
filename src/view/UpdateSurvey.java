@@ -26,40 +26,154 @@ public class UpdateSurvey extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        Survey_Name = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        Question_no = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        Question = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        Save_update = new javax.swing.JButton();
+        reset = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Survey_Name.setBackground(new java.awt.Color(0, 0, 0));
+        Survey_Name.setForeground(new java.awt.Color(255, 255, 255));
+        Survey_Name.setText("a");
+        Survey_Name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Survey_NameActionPerformed(evt);
             }
         });
+        getContentPane().add(Survey_Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 105, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(292, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(254, Short.MAX_VALUE))
-        );
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel1.setText("Survey Name :");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, 140, -1));
+
+        jLabel2.setText("=");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 72, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel3.setText("Question No :");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
+
+        jLabel4.setText("=");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 109, -1, -1));
+
+        Question_no.setBackground(new java.awt.Color(0, 0, 0));
+        Question_no.setForeground(new java.awt.Color(255, 255, 255));
+        Question_no.setText("hh");
+        getContentPane().add(Question_no, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, 71, -1));
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("SimSun", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel5.setText("Question    :");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 150, -1));
+
+        Question.setBackground(new java.awt.Color(0, 0, 0));
+        Question.setForeground(new java.awt.Color(255, 255, 255));
+        Question.setText("Enter the question !");
+        getContentPane().add(Question, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 200, 440, -1));
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel6.setText("Response Type");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Radio Button", "Suyog", "Nihira", "Prasanna" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, -1, -1));
+
+        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField4.setForeground(new java.awt.Color(0, 255, 51));
+        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 0), null, null));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 230, 40));
+
+        jTextField5.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField5.setForeground(new java.awt.Color(0, 255, 51));
+        jTextField5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 230, 40));
+
+        jTextField6.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField6.setForeground(new java.awt.Color(0, 255, 51));
+        jTextField6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, 230, 40));
+
+        jTextField7.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField7.setForeground(new java.awt.Color(0, 255, 51));
+        jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 370, 230, 40));
+
+        Save_update.setBackground(new java.awt.Color(0, 0, 0));
+        Save_update.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
+        Save_update.setForeground(new java.awt.Color(0, 255, 51));
+        Save_update.setText("SAVE");
+        Save_update.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 51), 1, true));
+        getContentPane().add(Save_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 100, 40));
+
+        reset.setBackground(new java.awt.Color(0, 0, 0));
+        reset.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
+        reset.setForeground(new java.awt.Color(0, 255, 51));
+        reset.setText("RESET");
+        reset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, new java.awt.Color(0, 255, 51), null, new java.awt.Color(0, 255, 0)));
+        getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 550, 110, 40));
+
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Showcard Gothic", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 255, 0));
+        jLabel8.setText("Update        Survey");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, 350, 50));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Frame 2.png")); // NOI18N
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, -10, 250, 110));
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(0, 255, 0));
+        jLabel7.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Desktop - 6.png")); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Survey_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Survey_NameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Survey_NameActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,6 +201,9 @@ public class UpdateSurvey extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(UpdateSurvey.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -97,6 +214,24 @@ public class UpdateSurvey extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField Question;
+    private javax.swing.JTextField Question_no;
+    private javax.swing.JButton Save_update;
+    private javax.swing.JTextField Survey_Name;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JButton reset;
     // End of variables declaration//GEN-END:variables
 }
