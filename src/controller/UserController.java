@@ -19,6 +19,13 @@ public class UserController{
     int result = dbconnection.manipulate(insertQuery);
     return result;
 }
+    public int DeleteUser(int id){
+        dbconnection=new Dbconnection();
+        String DeleteQuerry= String.format("delete from userdata where id=%d",id);
+        int result = dbconnection.manipulate(DeleteQuerry);
+        return result;
+    }
 
+        
 
 }
