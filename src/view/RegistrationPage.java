@@ -12,12 +12,12 @@ import model.UserModel;
  *
  * @author ACER
  */
-public class Test extends javax.swing.JFrame {
+public class RegistrationPage extends javax.swing.JFrame {
 
     /**
      * Creates new form test2
      */
-    public Test() {
+    public RegistrationPage() {
         initComponents();
     }
 
@@ -30,6 +30,7 @@ public class Test extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -42,10 +43,12 @@ public class Test extends javax.swing.JFrame {
         cPassword = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         fName = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         uEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         fName1 = new javax.swing.JTextField();
+
+        jLabel9.setText("jLabel9");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -138,9 +141,10 @@ public class Test extends javax.swing.JFrame {
         });
         getContentPane().add(fName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 200, 30));
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Group 4.png")); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 250, 120));
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setIcon(new javax.swing.ImageIcon("D:\\OneDrive\\Pictures\\Saved Pictures\\Frame 2.png")); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, -30, 230, 160));
 
         uEmail.setBackground(new java.awt.Color(0, 0, 0));
         uEmail.setForeground(new java.awt.Color(255, 255, 255));
@@ -182,6 +186,16 @@ public class Test extends javax.swing.JFrame {
         String passwordd = uPassword.getText();
         String confirmPass = cPassword.getText();
         
+        if (firstName.equals("")|| lastName.equals("")|| email.equals("")|| dob.equals("")){
+            JOptionPane.showMessageDialog(this,"empty field not accepted!!", "error",JOptionPane.ERROR_MESSAGE);
+                  
+        }
+        else{
+            
+            
+            
+        
+        
         if(passwordd.equals(confirmPass)){
             UserModel user= new UserModel(firstName,lastName,email,dob,passwordd);
             UserController uc= new UserController();
@@ -222,14 +236,30 @@ public class Test extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Test.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrationPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Test.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrationPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Test.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrationPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Test.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrationPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -250,7 +280,7 @@ public class Test extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Test().setVisible(true);
+                new RegistrationPage().setVisible(true);
             }
         });
     }
@@ -261,13 +291,14 @@ public class Test extends javax.swing.JFrame {
     private javax.swing.JTextField fName1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField lName;
     private javax.swing.JTextField uDob;
     private javax.swing.JTextField uEmail;
