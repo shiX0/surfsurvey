@@ -208,7 +208,7 @@ public class RegistrationPage extends javax.swing.JFrame {
         }
         
         
-              // TODO add your handling code here:
+        }      // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void fNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameActionPerformed
