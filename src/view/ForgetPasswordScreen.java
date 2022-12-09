@@ -34,12 +34,6 @@ public class ForgetPasswordScreen extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Desktop - 6.png"))); // NOI18N
-        jLabel1.setText("Gorgot Password");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Desktop - 6.png"))); // NOI18N
-        jLabel3.setText("OKay");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 1000));
         getContentPane().setLayout(null);
@@ -73,7 +67,7 @@ public class ForgetPasswordScreen extends javax.swing.JFrame {
         jButton1.setBounds(330, 280, 230, 40);
 
         jLabel6.setForeground(new java.awt.Color(51, 255, 51));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Desktop - 6.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(0, 0, 930, 580);
