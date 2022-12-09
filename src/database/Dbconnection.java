@@ -32,7 +32,7 @@ public class Dbconnection {
 
             connection = DriverManager.getConnection(
 
-                    "jdbc:mysql://sql6.freesqldatabase.com/sql6580451",username,password);
+                    "jdbc:mysql://db4free.net/surfsurvey",username,password);
 
 
 
