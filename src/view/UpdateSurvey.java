@@ -4,6 +4,8 @@
  */
 package view;
 
+import controller.SurveyController;
+
 /**
  *
  * @author ACER
@@ -35,11 +37,11 @@ public class UpdateSurvey extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         Question = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        Response_type = new javax.swing.JComboBox<>();
+        Option_1 = new javax.swing.JTextField();
+        Option_3 = new javax.swing.JTextField();
+        Option_4 = new javax.swing.JTextField();
+        Option_2 = new javax.swing.JTextField();
         Save_update = new javax.swing.JButton();
         reset = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -99,44 +101,49 @@ public class UpdateSurvey extends javax.swing.JFrame {
         jLabel6.setText("Response Type");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Radio Button", "Suyog", "Nihira", "Prasanna" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        Response_type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Radio Button", "Suyog", "Nihira", "Prasanna" }));
+        Response_type.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                Response_typeActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, -1, -1));
+        getContentPane().add(Response_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField4.setForeground(new java.awt.Color(0, 255, 51));
-        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 0), null, null));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 230, 40));
+        Option_1.setBackground(new java.awt.Color(0, 0, 0));
+        Option_1.setForeground(new java.awt.Color(0, 255, 51));
+        Option_1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 0), null, null));
+        getContentPane().add(Option_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 230, 40));
 
-        jTextField5.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField5.setForeground(new java.awt.Color(0, 255, 51));
-        jTextField5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 230, 40));
+        Option_3.setBackground(new java.awt.Color(0, 0, 0));
+        Option_3.setForeground(new java.awt.Color(0, 255, 51));
+        Option_3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        getContentPane().add(Option_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 230, 40));
 
-        jTextField6.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField6.setForeground(new java.awt.Color(0, 255, 51));
-        jTextField6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        Option_4.setBackground(new java.awt.Color(0, 0, 0));
+        Option_4.setForeground(new java.awt.Color(0, 255, 51));
+        Option_4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        Option_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                Option_4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, 230, 40));
+        getContentPane().add(Option_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 450, 230, 40));
 
-        jTextField7.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField7.setForeground(new java.awt.Color(0, 255, 51));
-        jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 370, 230, 40));
+        Option_2.setBackground(new java.awt.Color(0, 0, 0));
+        Option_2.setForeground(new java.awt.Color(0, 255, 51));
+        Option_2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 255, 51), null, null));
+        getContentPane().add(Option_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 370, 230, 40));
 
         Save_update.setBackground(new java.awt.Color(0, 0, 0));
         Save_update.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         Save_update.setForeground(new java.awt.Color(0, 255, 51));
         Save_update.setText("SAVE");
         Save_update.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 51), 1, true));
+        Save_update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Save_updateActionPerformed(evt);
+            }
+        });
         getContentPane().add(Save_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 100, 40));
 
         reset.setBackground(new java.awt.Color(0, 0, 0));
@@ -144,6 +151,11 @@ public class UpdateSurvey extends javax.swing.JFrame {
         reset.setForeground(new java.awt.Color(0, 255, 51));
         reset.setText("RESET");
         reset.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, new java.awt.Color(0, 255, 51), null, new java.awt.Color(0, 255, 0)));
+        reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetActionPerformed(evt);
+            }
+        });
         getContentPane().add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 550, 110, 40));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
@@ -167,13 +179,31 @@ public class UpdateSurvey extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Survey_NameActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void Response_typeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Response_typeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_Response_typeActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void Option_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Option_4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_Option_4ActionPerformed
+
+    private void Save_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Save_updateActionPerformed
+    String survey_name = Survey_Name.getText();
+    int question_no =  Integer.parseInt(Question_no.getText());
+    String question = Question.getText();
+    String option_1 = Option_1.getText();
+    String option_2 = Option_2.getText();
+    String option_3 = Option_3.getText();
+    String option_4 = Option_4.getText();
+    SurveyController sc = new SurveyController();
+    sc.updateSurvey(question,survey_name,question_no,option_1,option_2,option_3,option_4);
+    
+
+    }//GEN-LAST:event_Save_updateActionPerformed
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+       
+    }//GEN-LAST:event_resetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,11 +244,15 @@ public class UpdateSurvey extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Option_1;
+    private javax.swing.JTextField Option_2;
+    private javax.swing.JTextField Option_3;
+    private javax.swing.JTextField Option_4;
     private javax.swing.JTextField Question;
     private javax.swing.JTextField Question_no;
+    private javax.swing.JComboBox<String> Response_type;
     private javax.swing.JButton Save_update;
     private javax.swing.JTextField Survey_Name;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -228,10 +262,6 @@ public class UpdateSurvey extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JButton reset;
     // End of variables declaration//GEN-END:variables
 }
