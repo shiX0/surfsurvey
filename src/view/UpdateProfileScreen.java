@@ -137,7 +137,7 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
         jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-40, -370, 1450, 1110);
+        jLabel1.setBounds(-40, -370, 1440, 1110);
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2);

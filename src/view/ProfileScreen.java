@@ -51,23 +51,23 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel2.setText("    User  Profile");
         jLabel2.setOpaque(true);
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(270, 30, 220, 70);
+        jLabel2.setBounds(590, 40, 220, 70);
 
         jLabel3.setOpaque(true);
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(70, 170, 140, 40);
+        jLabel3.setBounds(450, 210, 140, 40);
 
         jLabel4.setOpaque(true);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(550, 170, 130, 40);
+        jLabel4.setBounds(780, 210, 130, 40);
 
         jLabel7.setOpaque(true);
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(70, 290, 140, 40);
+        jLabel7.setBounds(450, 340, 140, 40);
 
         jLabel6.setOpaque(true);
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(550, 280, 130, 40);
+        jLabel6.setBounds(780, 340, 130, 40);
 
         jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jButton1.setText("Update Profile");
@@ -77,7 +77,7 @@ public class ProfileScreen extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(220, 380, 130, 30);
+        jButton1.setBounds(510, 470, 130, 30);
 
         jButton2.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jButton2.setText("Delete profile");
@@ -87,7 +87,7 @@ public class ProfileScreen extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(390, 380, 130, 30);
+        jButton2.setBounds(720, 470, 130, 30);
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -95,7 +95,7 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel8.setText("First Name");
         jLabel8.setOpaque(true);
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(70, 130, 80, 30);
+        jLabel8.setBounds(450, 160, 80, 30);
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -103,7 +103,7 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel9.setText("Last Name");
         jLabel9.setOpaque(true);
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(550, 130, 80, 30);
+        jLabel9.setBounds(780, 160, 80, 30);
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -111,7 +111,7 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel10.setText("Phone Number");
         jLabel10.setOpaque(true);
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(70, 250, 120, 30);
+        jLabel10.setBounds(450, 290, 120, 30);
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -119,13 +119,13 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel11.setText("Address");
         jLabel11.setOpaque(true);
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(550, 240, 60, 40);
+        jLabel11.setBounds(790, 280, 60, 40);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         jLabel1.setOpaque(true);
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 729, 440);
+        jLabel1.setBounds(0, 0, 1460, 690);
 
         jButton3.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jButton3.setText("OK");
@@ -142,14 +142,14 @@ public class ProfileScreen extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 825, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1459, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
