@@ -26,14 +26,13 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -44,29 +43,18 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 887, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1043, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(882, 10, 887, 1043);
-
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("    Update   Profile");
+        jLabel2.setFont(new java.awt.Font("Showcard Gothic", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 255, 51));
+        jLabel2.setText("    Update    Profile");
         jLabel2.setOpaque(true);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(300, 60, 260, 50);
+        jLabel2.setBounds(550, 80, 360, 50);
 
+        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(0, 255, 0));
+        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jTextField1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +62,7 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(70, 190, 150, 30);
+        jTextField1.setBounds(870, 230, 180, 30);
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -82,12 +70,27 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
         jLabel3.setText("          First Name");
         jLabel3.setOpaque(true);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 150, 110, 30);
+        jLabel3.setBounds(480, 200, 110, 30);
 
+        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
         jTextField2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jTextField2.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(560, 180, 150, 30);
+        jTextField2.setBounds(510, 240, 180, 30);
+
+        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(0, 255, 51));
+        jTextField3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(520, 380, 180, 30);
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -95,7 +98,7 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
         jLabel5.setText("    Phone Number");
         jLabel5.setOpaque(true);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(80, 260, 110, 60);
+        jLabel5.setBounds(510, 330, 110, 60);
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -103,40 +106,38 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
         jLabel4.setText("     Last Name");
         jLabel4.setOpaque(true);
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(561, 150, 100, 20);
-
-        jTextField3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(70, 320, 140, 30);
+        jLabel4.setBounds(860, 190, 100, 20);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("   Address  ");
         jLabel7.setOpaque(true);
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(580, 270, 100, 30);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(570, 310, 130, 30);
+        jLabel7.setBounds(850, 340, 100, 30);
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(860, 380, 180, 30);
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Showcard Gothic", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 255, 51));
         jButton1.setText("OK");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(51, 255, 0)));
         getContentPane().add(jButton1);
-        jButton1.setBounds(370, 381, 80, 40);
+        jButton1.setBounds(690, 500, 130, 50);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
         jLabel1.setText("Address");
+        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 255, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, -420, 840, 890);
+        jLabel1.setBounds(-40, -370, 1450, 1110);
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jPanel2);
@@ -144,7 +145,7 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
 
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(580, 270, 33, 13);
+        jLabel6.setBounds(580, 270, 38, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -202,7 +203,6 @@ public class UpdateProfileScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

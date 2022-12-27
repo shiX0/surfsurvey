@@ -34,6 +34,12 @@ public class ForgetPasswordScreen extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Desktop - 6.png"))); // NOI18N
+        jLabel1.setText("Gorgot Password");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Desktop - 6.png"))); // NOI18N
+        jLabel3.setText("OKay");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 1000));
         getContentPane().setLayout(null);
@@ -59,9 +65,11 @@ public class ForgetPasswordScreen extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(330, 170, 170, 90);
 
-        jButton1.setBackground(new java.awt.Color(51, 255, 51));
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 255, 102));
         jButton1.setText("Send verification mail");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 51), 1, true));
         jButton1.setBorderPainted(false);
         getContentPane().add(jButton1);
         jButton1.setBounds(330, 280, 230, 40);
