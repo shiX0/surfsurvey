@@ -21,13 +21,15 @@ public class UserController{
     dbconnection = new Dbconnection();
     int result = dbconnection.manipulate(insertQuery);
     return result;
-}
+    }
+    
     public int DeleteUser(int id){
         dbconnection=new Dbconnection();
         String DeleteQuerry= String.format("delete from userdata where id=%d",id);
         int result = dbconnection.manipulate(DeleteQuerry);
         return result;
     }
+    
     public Boolean loginUser(String Email, String password) {
     String selectQuery = String.format(
       "select * from userdata where email = '%s' and passwordd = '%s' ",Email,password
@@ -51,7 +53,26 @@ public class UserController{
       return false;
     }
     return false;
-  } 
+  }
+    public String[] UserDetails(int id){
+        dbconnection=new Dbconnection();
+        String getquerry=String.format("select * from userdata where userid=%d", id);
+        ResultSet result=dbconnection.retrieve(getquerry);
+        String[] sd=new String[4];
+        try{
+        while(result.next()){
+            sd[0]=result.getString("firstName");
+            sd[1]=result.getString("lastName");
+            sd[2]=result.getString("email");
+            sd[3]=result.getString("dob");
+            return sd;
+        }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
         
 }
