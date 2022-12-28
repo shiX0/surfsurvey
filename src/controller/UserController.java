@@ -25,8 +25,8 @@ public class UserController{
     
     public int DeleteUser(int id){
         dbconnection=new Dbconnection();
-        String DeleteQuerry= String.format("delete from userdata where id=%d",id);
-        int result = dbconnection.manipulate(DeleteQuerry);
+        String DQuerry= String.format("delete from userdata where id=%d",id);
+        int result = dbconnection.manipulate(DQuerry);
         return result;
     }
     
