@@ -41,9 +41,9 @@ public class ProfileScreen extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -80,6 +80,10 @@ public class ProfileScreen extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(260, 420, 130, 40);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Profilepic.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(360, 70, 150, 140);
+
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -92,10 +96,6 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel7.setText("User Profile");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(380, 30, 120, 40);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Profilepic.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(360, 70, 150, 140);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
