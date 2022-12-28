@@ -58,5 +58,16 @@ public class SurveyController {
     System.out.println(ls1);
     return new Object[]{ls1,totalq};
 }
+    
+    public void writingTheFile(ArrayList<ArrayList> survey){
+      try {
+      PrintWriter writer = new PrintWriter("list.txt", "UTF-8");
+      for (ArrayList<String> innerList : survey) {
+          writer.println(innerList);
+      }
+      writer.close();
+    } catch (FileNotFoundException | UnsupportedEncodingException e) {
+        e.printStackTrace();
+    }
+    }
 }
-
