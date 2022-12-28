@@ -3,18 +3,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
+import controller.UserController;
+import constraints.User;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author nishma
  */
 public class ProfileScreen extends javax.swing.JFrame {
+    public void upProfile(){
+        UserController sc=new UserController();
+        String[] result=sc.UserDetails(User.id);
+        jLabel6.setText(result[0]+result[1]);
+        jLabel8.setText(result[2]);
+        jLabel5.setText(result[3]);
+    }
 
     /**
      * Creates new form ProfileScreen
      */
     public ProfileScreen() {
         initComponents();
+        
+        
     }
 
     /**
@@ -26,59 +38,26 @@ public class ProfileScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setLayout(null);
-
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Perpetua", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("    User  Profile");
-        jLabel2.setOpaque(true);
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(590, 40, 220, 70);
-
-        jLabel3.setOpaque(true);
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(450, 210, 140, 40);
-
-        jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(780, 210, 130, 40);
-
-        jLabel7.setOpaque(true);
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(450, 340, 140, 40);
-
-        jLabel6.setOpaque(true);
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(780, 340, 130, 40);
-
-        jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jButton1.setText("Update Profile");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        setMinimumSize(new java.awt.Dimension(850, 575));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(510, 470, 130, 30);
+        getContentPane().setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(255, 51, 51));
         jButton2.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jButton2.setText("Delete profile");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -86,87 +65,86 @@ public class ProfileScreen extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(720, 470, 130, 30);
+        getContentPane().add(jButton2);
+        jButton2.setBounds(450, 420, 130, 40);
 
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("First Name");
-        jLabel8.setOpaque(true);
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(450, 160, 80, 30);
-
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Last Name");
-        jLabel9.setOpaque(true);
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(780, 160, 80, 30);
-
-        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Phone Number");
-        jLabel10.setOpaque(true);
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(450, 290, 120, 30);
-
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Address");
-        jLabel11.setOpaque(true);
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(790, 280, 60, 40);
-
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1460, 690);
-
-        jButton3.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        jButton3.setText("OK");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(0, 255, 0));
+        jButton1.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jButton1.setText("Update Profile");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(260, 370, 90, 30);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(260, 420, 130, 40);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 687, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("000");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(410, 290, 60, 30);
+
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("User Profile");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(380, 30, 120, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Profilepic.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(360, 70, 150, 140);
+
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Name");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(330, 220, 190, 30);
+
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Email");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(330, 250, 190, 30);
+
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Dob:");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(370, 290, 60, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-3, 0, 920, 570);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int resut = JOptionPane.showOptionDialog(null, "Do you want to delete your account?", "Confirm", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
+                        if (resut == JOptionPane.OK_OPTION) {
+                       UserController sc = new UserController();
+                       sc.DeleteUser(User.id);
+                        this.dispose();
+                      }
+
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        upProfile();
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -194,11 +172,13 @@ public class ProfileScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ProfileScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ProfileScreen().setVisible(true);
+                
             }
         });
     }
@@ -206,17 +186,12 @@ public class ProfileScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
