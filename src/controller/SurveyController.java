@@ -70,4 +70,33 @@ public class SurveyController {
         e.printStackTrace();
     }
     }
+    
+public ArrayList<ArrayList<String>> readTheFile() {
+  ArrayList<ArrayList<String>> survey = new ArrayList<>();
+  try (Scanner scanner = new Scanner(new File("list.txt"))) {
+    while (scanner.hasNextLine()) {
+      ArrayList<String> innerList = new ArrayList<>();
+      String line = scanner.nextLine();
+      Scanner lineScanner = new Scanner(line);
+      lineScanner.useDelimiter(",");
+      while (lineScanner.hasNext()) {
+        String s = lineScanner.next();
+        s = s.trim();  // Remove leading and trailing whitespace
+        innerList.add(s);
+      }
+      survey.add(innerList);
+      lineScanner.close();
+    }
+  } catch (FileNotFoundException e) {
+    e.printStackTrace();
+  }
+
+  return survey;
 }
+
+
+
+
+    
+}
+
