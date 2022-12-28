@@ -24,10 +24,11 @@ public class UserController{
 }
     public int DeleteUser(int id){
         dbconnection=new Dbconnection();
-        String DeleteQuerry= String.format("delete from userdata where id=%d",id);
-        int result = dbconnection.manipulate(DeleteQuerry);
+        String DQuerry= String.format("delete from userdata where id=%d",id);
+        int result = dbconnection.manipulate(DQuerry);
         return result;
     }
+    
     public Boolean loginUser(String Email, String password) {
     String selectQuery = String.format(
       "select * from userdata where email = '%s' and passwordd = '%s' ",Email,password
