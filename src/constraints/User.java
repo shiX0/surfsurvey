@@ -9,7 +9,7 @@ package constraints;
  * @author Deepak
  */
 public class User {
-    public static int id=2;
+    public static int id=0;
     public static String surveyname="survey";
     public static int surLen;
 }
