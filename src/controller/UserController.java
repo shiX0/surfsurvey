@@ -1,6 +1,8 @@
 package controller;
 
 import database.Dbconnection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import model.UserModel;
 
 public class UserController{
@@ -25,6 +27,31 @@ public class UserController{
         int result = dbconnection.manipulate(DeleteQuerry);
         return result;
     }
+    public Boolean loginUser(String Email, String password) {
+    String selectQuery = String.format(
+      "select * from userdata where email = '%s' and passwordd = '%s' ",Email,password
+    );
+    dbconnection = new Dbconnection();
+    ResultSet rs = dbconnection.retrieve(selectQuery);
+    System.out.println(rs);
+    try {
+      while (rs.next()) {
+        int fetchedid = rs.getInt("userid");
+        String fetchedEmail = rs.getString("email");
+        String fetchedPassword = rs.getString("passwordd");
+        User.id=fetchedid;
+        System.out.println(fetchedEmail + fetchedPassword);
+        if (Email.equals(fetchedEmail) && password.equals(fetchedPassword)) {
+          return true;
+        }
+      }
+    } catch (SQLException e) {
+      // TODO: handle exception
+      e.printStackTrace();
+      return false;
+    }
+    return false;
+  } 
 
         
 }
