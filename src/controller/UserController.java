@@ -46,7 +46,6 @@ public class UserController{
         }
       }
     } catch (SQLException e) {
-      // TODO: handle exception
       e.printStackTrace();
       return false;
     }
