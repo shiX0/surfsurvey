@@ -174,7 +174,27 @@ public class LoginScreen extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       
+        String mail=jTextField2.getText();
+        String password=jTextField1.getText();
+        if(!mail.equals("")||!password.equals("")){
+        UserController uc= new UserController();
+        boolean result=uc.loginUser(mail, password);
+        if(result==true){
+            int resut = JOptionPane.showOptionDialog(null, "Login Sucessfull##!", "Confirm", JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        if (resut == JOptionPane.OK_OPTION) {
+                        // Create the new frame and make it visible
+                        DashboardScreen ok=new DashboardScreen();
+                        ok.setVisible(true);
+                        this.dispose();
+                      }
+        }else{
+            JOptionPane.showMessageDialog(this,"Invalid User Details", "error",JOptionPane.ERROR_MESSAGE);
+        }
+    }else{
+            JOptionPane.showMessageDialog(this,"Enter all the fields", "error",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
