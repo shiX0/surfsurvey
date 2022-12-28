@@ -200,7 +200,26 @@ public class CreateSurveys extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+       int Qid=0;
+       String Sname = jLabel4.getText();
+       String Question = jTextField1.getText();
+       String option1 = jTextField2.getText();
+       String option2 = jTextField3.getText();
+       String option3 = jTextField4.getText();
+       String option4 = jTextField5.getText();
+       String selectedbar=jComboBox1.getSelectedItem().toString();
        
+       String inquery=String.format("Insert into questions (surveyname,question_id,responce,question,option1,option2,option3, option4) values ('%s',%d,'%s','%s','%s','%s','%s','%s')", Sname,Qid,selectedbar,Question,option1,option2,option3,option4);
+       Dbconnection dbconnection = new Dbconnection();
+        int out = dbconnection.manipulate(inquery);
+        System.out.println(out);
+        Qid++;
+        jLabel3.setText(String.valueOf(Qid));
+        jTextField1.setText("Enter the question");
+        jTextField2.setText("option1");
+        jTextField3.setText("option2");
+        jTextField4.setText("option3");
+        jTextField5.setText("option4");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
