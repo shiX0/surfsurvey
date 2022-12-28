@@ -50,4 +50,13 @@ public class SurveyController {
         }
         return survey;
     }
+    
+    public Object[] nextquestoin(int question_no){
+    ArrayList<ArrayList<String>> ls=readTheFile();
+    int totalq=ls.size();
+    ArrayList<String> ls1=ls.get(question_no);
+    System.out.println(ls1);
+    return new Object[]{ls1,totalq};
 }
+}
+
