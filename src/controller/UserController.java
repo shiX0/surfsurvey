@@ -4,6 +4,7 @@ import database.Dbconnection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.UserModel;
+import constraints.User;
 
 public class UserController{
     Dbconnection dbconnection;
