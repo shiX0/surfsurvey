@@ -3,21 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controller;
-
 import database.Dbconnection;
-
+import java.io.FileNotFoundException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
+import java.io.File;
 
 /**
  *
- * @author ACER
+ * @author Subhash
  */
-public class SurveyController {
-    Dbconnection dbConnection;
-    public void updateSurvey(String question, String name, int number,String first, String second, String third, String fourth){
-        dbConnection = new Dbconnection();
-        String updateQuery = String.format("Update questions set surveyname = '%s',question = '%s',option1='%s',option2='%s',option3='%s',option4='%s' where question_id =%d",name,question,first,second,third,fourth,number);
-        dbConnection.manipulate(updateQuery);
-    }
-    
-    
-}
