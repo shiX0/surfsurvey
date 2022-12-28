@@ -185,7 +185,7 @@ public class DashboardScreen extends javax.swing.JFrame {
         jTextField4.setBounds(834, 307, 165, 16);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1350, 885);
+        jPanel1.setBounds(0, 0, 0, 885);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
