@@ -18,6 +18,7 @@ public class ProfileScreen extends javax.swing.JFrame {
         jLabel6.setText(result[0]+result[1]);
         jLabel8.setText(result[2]);
         jLabel5.setText(result[3]);
+        
     }
 
     /**
