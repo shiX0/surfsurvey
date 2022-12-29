@@ -73,7 +73,24 @@ public class UserController{
         }
         return null;
     }
-
+public String[] getUserDetails(String email){
+        dbconnection=new Dbconnection();
+        String getquerry=String.format("select * from userdata where email='%s'", email);
+        ResultSet result=dbconnection.retrieve(getquerry);
+        String[] sd=new String[2];
+        try{
+        while(result.next()){
+            sd[0]=result.getString("se_question");
+            sd[1]=result.getString("se_answer");
+            
+            return sd;
+        }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
         
 }
 
