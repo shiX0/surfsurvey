@@ -94,7 +94,22 @@ public ArrayList<ArrayList<String>> readTheFile() {
   return survey;
 }
 
-
+public static ArrayList surveyNames(){
+    Dbconnection db = new Dbconnection();
+    String qwery="select distinct surveyname from questions";
+    ResultSet result=db.retrieve(qwery);
+    ArrayList survey=new ArrayList();
+    try{
+        while(result.next()){
+            String ls=result.getString("Surveyname");
+            survey.add(ls);
+        }
+    }catch (SQLException e){
+        e.printStackTrace();
+        return null;
+    }
+    return survey;
+} 
 
 
     
