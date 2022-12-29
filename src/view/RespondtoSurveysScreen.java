@@ -17,40 +17,7 @@ public class RespondtoSurveysScreen extends javax.swing.JFrame {
 public RespondtoSurveysScreen() {
         initComponents();
     }
-    public int questionn=0;
-    public int curQ=0;
-    public void firstquest(){
-        SurveyController sc = new SurveyController();
-        Object[] ls1=sc.nextquestoin(questionn);
-        ArrayList ls=(ArrayList)ls1[0];
-        curQ=(int) ls1[1];
-        String CurQs=Integer.toString(curQ);
-        jLabel5.setText(CurQs);
-        jLabel7.setText(CurQs);
-        String progb=Integer.toString(questionn+1);
-        jLabel6.setText(progb);
-        if (ls.get(0).equals("[Radio Button")){
-            jPanel2.setVisible(false);
-            jLabel3.setText(ls.get(1).toString());
-            jRadioButton1.setText(ls.get(2).toString());jRadioButton2.setText(ls.get(3).toString());
-            jRadioButton3.setText(ls.get(4).toString());
-            jRadioButton4.setText(ls.get(5).toString());
-        }else if (!ls.get(0).equals("[Rating")){
-            int resut = JOptionPane.showOptionDialog(null, "The connection with the database is invalid or you clicked wrong survey!!", "Database Conection failed!!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE, null, null, null);
-            if (resut == JOptionPane.OK_OPTION) {
-                // Create the new frame and make it visible
-                this.dispose();
-            }
-        }else{
-            jPanel2.setVisible(true);
-            jLabel3.setText(ls.get(1).toString());
-            jRadioButton1.setVisible(false);
-            jRadioButton2.setVisible(false);
-            jRadioButton3.setVisible(false);
-            jRadioButton4.setVisible(false);
-        }
-        questionn++;
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
