@@ -38,7 +38,6 @@ public RespondtoSurveysScreen() {
         }else if (!ls.get(0).equals("[Rating")){
             int resut = JOptionPane.showOptionDialog(null, "The connection with the database is invalid or you clicked wrong survey!!", "Database Conection failed!!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE, null, null, null);
             if (resut == JOptionPane.OK_OPTION) {
-                // Create the new frame and make it visible
                 this.dispose();
             }
         }else{
