@@ -91,6 +91,12 @@ public String[] getUserDetails(String email){
         }
         return null;
     }
+public int UpdateUserPass(String email,String Password){
+        dbconnection=new Dbconnection();
+        String UpdateQuerry= String.format("Update userdata set passwordd='%s' where email='%s'",Password,email);
+        int result = dbconnection.manipulate(UpdateQuerry);
+        return result;
+        }
         
 }
 
