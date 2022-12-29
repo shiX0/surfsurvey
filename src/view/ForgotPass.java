@@ -196,7 +196,36 @@ public class ForgotPass extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       
+        String mail=email.getText();
+        String password=pass.getText();
+        String cpassword=cpass.getText();
+        String answer=ans.getText();
+        String question=select.getSelectedItem().toString();
+        UserController sc= new UserController();
+        String[] qq=sc.getUserDetails(mail);
+        System.out.println(qq[0]+qq[1]);
+        if(mail.equals("")||password.equals("")||cpassword.equals("")||answer.equals("")||answer.equals("")||question.equals("Select a Security Question:")||mail.equals("Email")||password.equals("New Password")||cpassword.equals("Confirm Password")||answer.equals("Answer")){
+            JOptionPane.showMessageDialog(this,"empty field not accepted!!", "error",JOptionPane.ERROR_MESSAGE);
+        }else{
+            if(password.equals(cpassword)){
+                if(question.equals(qq[0])&& answer.equals(qq[1])){
+                    int re=sc.UpdateUserPass(mail, password);
+                    if(re==1){
+                        int result = JOptionPane.showOptionDialog(null, "Password reset sucessfull! Open Login Page?", "Confirm", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        if (result == JOptionPane.OK_OPTION) {
+                        // Create the new frame and make it visible
+                        LoginScreen ok=new LoginScreen();
+                        ok.setVisible(true);
+                        this.dispose();
+                      }
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(this,"Invalid User Details", "error",JOptionPane.ERROR_MESSAGE);
+                }
+            }else{
+                JOptionPane.showMessageDialog(this,"Passwords are not equal", "error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
